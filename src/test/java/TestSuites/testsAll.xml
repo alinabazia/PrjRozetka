@@ -3,9 +3,13 @@
     <test name="All Tests">
         <classes>
             <class name="tests.searchWithWrongKeyboardLayout.SearchWithWrongKeyboardLayoutTest" />
+            <class name="tests.shoeSizeChange.ShoeSizeChangeTest" />
             <class name="tests.addProductToCart.AddProductToCartTest" />
             <class name="tests.categoryNavigation.CategoriesNavigationTest" />
-            <class name="tests.shoeSizeChange.ShoeSizeChangeTest" />
+            <class name="tests.increaseProductQuantity.IncreaseProductQuantityTest" />
+            <class name="tests.pickupPointMapUsage.PickUpPointMapUsageTest" />
+            <class name="tests.priceIsDiscount.PriceIsDiscountTest" />
+            <class name="tests.voiceInputIsPresent.VoiceInputIsPresentTest" />
         </classes>
     </test>
 </suite>
