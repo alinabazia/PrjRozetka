@@ -1,0 +1,13 @@
+<suite name="Positive Tests Suite">
+    <test name="Positive Tests">
+        <classes>
+            <class name="tests.addProductToCart.AddProductToCartTest" />
+            <class name="tests.categoryNavigation.CategoriesNavigationTest" />
+            <class name="tests.shoeSizeChange.ShoeSizeChangeTest" />
+        </classes>
+        <groups>
+            <run>
+                <include name="PositiveTest" />
+            </run>
+        </groups>
+    </test>

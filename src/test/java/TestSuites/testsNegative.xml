@@ -1,0 +1,13 @@
+
+<suite name="Negative Tests Suite">
+<test name="Negative Tests">
+    <classes>
+        <class name="tests.searchWithWrongKeyboardLayout.SearchWithWrongKeyboardLayoutTest" />
+    </classes>
+    <groups>
+        <run>
+            <include name="NegativeTest" />
+        </run>
+    </groups>
+</test>
+</suite>

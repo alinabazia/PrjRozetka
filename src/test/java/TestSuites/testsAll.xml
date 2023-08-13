@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="All Tests Suite">
+    <test name="All Tests">
+        <classes>
+            <class name="tests.searchWithWrongKeyboardLayout.SearchWithWrongKeyboardLayoutTest" />
+            <class name="tests.addProductToCart.AddProductToCartTest" />
+            <class name="tests.categoryNavigation.CategoriesNavigationTest" />
+            <class name="tests.shoeSizeChange.ShoeSizeChangeTest" />
+        </classes>
+    </test>
+</suite>
