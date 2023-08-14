@@ -82,6 +82,8 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
                         <suiteXmlFile>testsAll.xml</suiteXmlFile>
+                        <suiteXmlFile>testsNegative.xml</suiteXmlFile>
+                        <suiteXmlFile>testsPositive.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

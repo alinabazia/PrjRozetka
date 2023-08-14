@@ -6,7 +6,7 @@ import tests.base.BaseTest;
 import java.time.Duration;
 
 public class CategoriesNavigationTest extends BaseTest {
-   @Test
+   @Test(groups = "PositiveTest")
     public void checkIfCategoryPageOpens () {
         basePage.open("https://rozetka.com.ua/ua/");
         homePage.openCategoryNotebooks();

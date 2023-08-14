@@ -1,9 +1,21 @@
 <suite name="Positive Tests Suite">
     <test name="Positive Tests">
         <classes>
+            <class name="tests.shoeSizeChange.ShoeSizeChangeTest" />
+            <class name="tests.phoneColorChange.PhoneColorChangeTest" />
             <class name="tests.addProductToCart.AddProductToCartTest" />
             <class name="tests.categoryNavigation.CategoriesNavigationTest" />
-            <class name="tests.shoeSizeChange.ShoeSizeChangeTest" />
+            <class name="tests.increaseProductQuantity.IncreaseProductQuantityTest" />
+            <class name="tests.pickupPointMapUsage.PickUpPointMapUsageTest" />
+            <class name="tests.priceIsDiscount.PriceIsDiscountTest" />
+            <class name="tests.voiceInputIsPresent.VoiceInputIsPresentTest" />
+            <class name="tests.changeLanguage.ChangeLanguageTest" />
+            <class name="tests.clearShoppingCart.ClearShoppingCartTest" />
+            <class name="tests.clickNextImage.ClickNextImageTest" />
+            <class name="tests.defaultLanguage.DefaultLanguageTest" />
+            <class name="tests.homePageLogo.HomePageLogoTest" />
+            <class name="tests.visibilityOfTwitterIcon.VisibilityOfTwitterIconTest" />
+            <class name="tests.facebookLoginOption.FacebookLoginOptionTest" />
         </classes>
         <groups>
             <run>
@@ -11,3 +23,4 @@
             </run>
         </groups>
     </test>
+</suite>

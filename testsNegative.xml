@@ -3,7 +3,10 @@
 <test name="Negative Tests">
     <classes>
         <class name="tests.searchWithWrongKeyboardLayout.SearchWithWrongKeyboardLayoutTest" />
-
+        <class name="tests.loginWithWrongCredentials.LoginWithWrongCredentialsTest" />
+        <class name="tests.addToWishListLoggedOut.AddToWishListLoggedOut" />
+        <class name="tests.sendEmptySearchQuery.SendEmptySearchQueryTest" />
+        <class name="tests.excessiveProductQuantity.ExcessiveProductQuantityTest" />
     </classes>
     <groups>
         <run>
