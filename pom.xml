@@ -81,7 +81,7 @@
                     <skipTests>false</skipTests>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>C:\Users\gbntf\Desktop\RozetkaProject\Rozetka\testsAll.xml</suiteXmlFile>
+                        <suiteXmlFile>testsAll.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
