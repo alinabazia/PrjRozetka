@@ -13,9 +13,11 @@ public class PhoneProductPage extends BasePage {
     private final By pickUpPointMap = By.xpath("//*[@class=\"modal-map__map\"]");
     private final By phonePrice = By.xpath("//*[@class=\"product-price__big product-price__big-color-red\"]");
     private final By phoneBlack = By.xpath("//*[@id=\"#scrollArea\"]/div[1]/div[2]/rz-product-main-info/rz-var-parameters/rz-var-parameter-option/div/div/ul/li[1]/rz-var-parameter-option-item/a");
-    private final By phoneBlackProductCode = By.xpath("//*[@class='product-about__right']//*[@class='product__code-accent' and contains(text(), '370613178')]");
+    private final By phoneBlackColor = By.xpath("//*[@id=\"#scrollArea\"]/div[1]/div[2]/rz-product-main-info/rz-var-parameters/rz-var-parameter-option/div/p[contains(text(), 'Black')]");
     private final By wishListButton = By.xpath("//*[@class=\"product-about__right\"]//* [@class=\"wish-button js-wish-button ng-star-inserted\"]");
     private final By loginEnter = By.xpath("//*[@class=\"button button--large button--green auth-modal__submit ng-star-inserted\"]");
+    private final By imageArrow = By.xpath("//rz-product-gallery-main//*[@class=\"simple-slider__control simple-slider__control--next\"]");
+    private final By activeSecondImage = By.xpath("//*[@style=\"transform: translate3d(-1488px, 0px, 0px); transition-duration: 0ms;\"]");
 
     public PhoneProductPage clickPickUpMapButton () {
         final WebElement pickUpPointMapButtonElement = driver.findElement(pickUpPointMapButton);
@@ -43,10 +45,10 @@ public class PhoneProductPage extends BasePage {
         driver.findElement(phoneBlack).click();
         return this;
     }
-    public PhoneProductPage verifyPhoneProductCode () {
-        final WebElement phoneBlackProductCodeElement = driver.findElement(phoneBlackProductCode);
-        waitElementIsVisible(phoneBlackProductCodeElement);
-        assertTrue(phoneBlackProductCodeElement.isDisplayed(), "Product code for black phone is incorrect");
+    public PhoneProductPage verifyPhoneColor() {
+        final WebElement phoneBlackColorElement = driver.findElement(phoneBlackColor);
+        waitElementIsVisible(phoneBlackColorElement);
+        assertTrue(phoneBlackColorElement.isDisplayed(), "Product color for black phone is incorrect");
         return this;
     }
     public PhoneProductPage clickWishListButton () {
@@ -59,6 +61,18 @@ public class PhoneProductPage extends BasePage {
         final WebElement loginEnterElement = driver.findElement(loginEnter);
         waitElementIsVisible(loginEnterElement);
         assertTrue(loginEnterElement.isDisplayed(), "Login window is missing");
+        return this;
+    }
+    public PhoneProductPage nextImage () {
+        final WebElement imageArrowElement = driver.findElement(imageArrow);
+        waitElementIsVisible(imageArrowElement);
+        driver.findElement(imageArrow).click();
+        return this;
+    }
+    public PhoneProductPage activeImage () {
+        final WebElement activeSecondImageElement = driver.findElement(activeSecondImage);
+        waitElementIsVisible(activeSecondImageElement);
+        assertTrue(activeSecondImageElement.isDisplayed(), "Second image is not active");
         return this;
     }
 

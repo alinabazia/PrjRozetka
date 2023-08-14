@@ -9,7 +9,7 @@ public class CommonActions {
     public static WebDriver createDriver() {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)).pageLoadTimeout(Duration.ofSeconds(10));;
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7)).pageLoadTimeout(Duration.ofSeconds(10));;
         return driver;
     }
 }

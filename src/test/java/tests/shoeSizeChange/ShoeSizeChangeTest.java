@@ -8,6 +8,6 @@ public class ShoeSizeChangeTest extends BaseTest {
     public void checkIfShoeSizeChanges () {
         basePage.open("https://rozetka.com.ua/ua/adidas_4064041101450/p333120067/");
         sneakerProductPage.changeSizeTo38();
-        sneakerProductPage.productCodeIsVisible();
+        sneakerProductPage.productSizeIsVisible();
     }
 }

@@ -8,6 +8,6 @@ public class PhoneColorChangeTest extends BaseTest {
     public void checkIfColorChanges() {
         basePage.open("https://rozetka.com.ua/ua/samsung-sm-a145flgusek/p370613160/");
         phoneProductPage.changeColor();
-        phoneProductPage.verifyPhoneProductCode();
+        phoneProductPage.verifyPhoneColor();
     }
 }

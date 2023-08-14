@@ -24,11 +24,10 @@ public class HomePage extends BasePage {
     private final By activeLanguageUa = By.xpath("//*[@class='lang__link lang__link--active ng-star-inserted' and contains(text(), 'UA')]");
     private final By activeLanguageRu = By.xpath("//*[@class='lang__link lang__link--active ng-star-inserted' and contains(text(), 'RU')]");
     private final By inactiveLanguage = By.xpath("//*[@class='lang__link ng-star-inserted']");
-    private final By burgerMenu = By.xpath("//*[@class=\"header__button ng-tns-c59-1\"]");
-    private final By serviceButton = By.xpath("//*[@id=\"cdk-overlay-0\"]/nav/div/div[2]/ul[2]/li[2]/rz-service-links/div[3]/div/button");
-    private final By aboutUs = By.xpath("//*[@class=\"ng-tns-c56-2\" and contains(text(), 'Про нас')]");
     private final By emptySearch = By.xpath("//*[@class=\"catalog-empty\"]");
     private final By twitterIcon = By.xpath("//rz-main-page-sidebar//a[@class=\"socials__link socials__link--twitter\"]");
+    private final By rozetkaLogo = By.xpath("//header//*[@alt = \"Rozetka Logo\"]");
+    private final By facebookLoginButton = By.xpath("//*[@class=\"button button--large button--gray button--with-icon auth-modal__social-button auth-modal__social-button_type_facebook\"]");
 
     public HomePage openCategoryNotebooks() {
         driver.findElement(catalog).click();
@@ -75,27 +74,6 @@ public class HomePage extends BasePage {
         assertTrue(activeLanguageRuElement.isDisplayed(), "Language is not changed");
         return this;
     }
-    public HomePage openBurgerMenu() {
-        final WebElement burgerMenuElement = driver.findElement(burgerMenu);
-        waitElementIsVisible(burgerMenuElement);
-        driver.findElement(burgerMenu).click();
-        return this;
-    }
-    public HomePage openService() {
-        final WebElement serviceButtonElement = driver.findElement(serviceButton);
-        waitElementIsVisible(serviceButtonElement);
-        Actions actions = new Actions(driver);
-        actions.sendKeys(Keys.END);
-        actions.perform();
-        driver.findElement(serviceButton).click();
-        return this;
-    }
-    public HomePage serviceUnfolded() {
-        final WebElement aboutUsElement = driver.findElement(aboutUs);
-        waitElementIsVisible(aboutUsElement);
-        assertTrue(aboutUsElement.isDisplayed(),"Services didn't unfold");
-        return this;
-    }
     public HomePage sendEmptySearch() {
         final WebElement searchSubmitElement = driver.findElement(searchSubmit);
         waitElementIsVisible(searchSubmitElement);
@@ -112,6 +90,19 @@ public class HomePage extends BasePage {
         final WebElement twitterIconElement = driver.findElement(twitterIcon);
         waitElementIsVisible(twitterIconElement);
         assertTrue(twitterIconElement.isDisplayed(), "Twitter icon is not displayed");
+        return this;
+    }
+    public HomePage rozetkaLogoIsVisible() {
+        final WebElement rozetkaLogoElement = driver.findElement(rozetkaLogo);
+        waitElementIsVisible(rozetkaLogoElement);
+        assertTrue(rozetkaLogoElement.isDisplayed(), "Logo isn't visible");
+        return this;
+    }
+    public HomePage facebookLogin() {
+        driver.findElement(loginButton).click();
+        final WebElement facebookLoginButtonElement = driver.findElement(facebookLoginButton);
+        waitElementIsVisible(facebookLoginButtonElement);
+        assertTrue(facebookLoginButtonElement.isDisplayed(), "Facebook login option is not available");
         return this;
     }
 }

@@ -2,14 +2,26 @@
 <suite name="All Tests Suite">
     <test name="All Tests">
         <classes>
-            <class name="tests.searchWithWrongKeyboardLayout.SearchWithWrongKeyboardLayoutTest" />
             <class name="tests.shoeSizeChange.ShoeSizeChangeTest" />
+            <class name="tests.phoneColorChange.PhoneColorChangeTest" />
             <class name="tests.addProductToCart.AddProductToCartTest" />
+            <class name="tests.searchWithWrongKeyboardLayout.SearchWithWrongKeyboardLayoutTest" />
             <class name="tests.categoryNavigation.CategoriesNavigationTest" />
             <class name="tests.increaseProductQuantity.IncreaseProductQuantityTest" />
             <class name="tests.pickupPointMapUsage.PickUpPointMapUsageTest" />
             <class name="tests.priceIsDiscount.PriceIsDiscountTest" />
             <class name="tests.voiceInputIsPresent.VoiceInputIsPresentTest" />
+            <class name="tests.addToWishListLoggedOut.AddToWishListLoggedOut" />
+            <class name="tests.changeLanguage.ChangeLanguageTest" />
+            <class name="tests.clearShoppingCart.ClearShoppingCartTest" />
+            <class name="tests.clickNextImage.ClickNextImageTest" />
+            <class name="tests.defaultLanguage.DefaultLanguageTest" />
+            <class name="tests.excessiveProductQuantity.ExcessiveProductQuantityTest" />
+            <class name="tests.homePageLogo.HomePageLogoTest" />
+            <class name="tests.loginWithWrongCredentials.LoginWithWrongCredentialsTest" />
+            <class name="tests.sendEmptySearchQuery.SendEmptySearchQueryTest" />
+            <class name="tests.visibilityOfTwitterIcon.VisibilityOfTwitterIconTest" />
+            <class name="tests.facebookLoginOption.FacebookLoginOptionTest" />
         </classes>
     </test>
 </suite>

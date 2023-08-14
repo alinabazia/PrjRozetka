@@ -3,10 +3,6 @@ package Project.Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.nio.file.WatchEvent;
-import java.time.Duration;
 
 import static org.testng.Assert.assertTrue;
 
@@ -15,8 +11,8 @@ public class SneakerProductPage extends BasePage {
         super(driver);
     }
 
-    private final By size38 = By.xpath("//*[@class='ng-star-inserted' and contains(text(),'38 ')]");
-    private final By productCode = By.xpath("//*[@class='product-about__right']//*[@class='product__code-accent' and contains(text(), '333120058')]");
+    private final By size38Button = By.xpath("//*[@class='ng-star-inserted' and contains(text(),'38 ')]");
+    private final By productSize = By.xpath("//*[@id=\"#scrollArea\"]/div[1]/div[2]/rz-product-main-info/rz-var-parameters/rz-var-parameter-option/div/p[contains(text(), '38')]");
     private final By buyButton = By.xpath("//*[@class=\"buy-button button button--with-icon button--green button--medium buy-button--tile ng-star-inserted\"]");
     private final By closeButton = By.xpath("//*[@class=\"modal__close\"]");
     private final By cartGoodsQuantity = By.xpath("//*[@class=\"badge badge--green ng-star-inserted\" and contains(text(), '1')]");
@@ -31,7 +27,7 @@ public class SneakerProductPage extends BasePage {
 
 
     public SneakerProductPage changeSizeTo38() {
-        driver.findElement(size38).click();
+        driver.findElement(size38Button).click();
         return this;
     }
 
@@ -40,10 +36,10 @@ public class SneakerProductPage extends BasePage {
         return this;
     }
 
-    public SneakerProductPage productCodeIsVisible() {
-        final WebElement productCodeElement = driver.findElement(productCode);
-        waitElementIsVisible(productCodeElement);
-        assertTrue(productCodeElement.isDisplayed(), "Correct product code is not displayed");
+    public SneakerProductPage productSizeIsVisible() {
+        final WebElement productSizeElement = driver.findElement(productSize);
+        waitElementIsVisible(productSizeElement);
+        assertTrue(productSizeElement.isDisplayed(), "Correct product size is not displayed");
         return this;
     }
 
