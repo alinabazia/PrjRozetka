@@ -1,6 +1,12 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Negative Tests Suite">
-<test name="Negative Tests">
+    <test name="Negative Tests">
+        <groups>
+            <run>
+                <include name="NegativeTest" />
+            </run>
+        </groups>
     <classes>
         <class name="tests.searchWithWrongKeyboardLayout.SearchWithWrongKeyboardLayoutTest" />
         <class name="tests.loginWithWrongCredentials.LoginWithWrongCredentialsTest" />
@@ -8,10 +14,5 @@
         <class name="tests.sendEmptySearchQuery.SendEmptySearchQueryTest" />
         <class name="tests.excessiveProductQuantity.ExcessiveProductQuantityTest" />
     </classes>
-    <groups>
-        <run>
-            <include name="NegativeTest" />
-        </run>
-    </groups>
-</test>
+    </test>
 </suite>
